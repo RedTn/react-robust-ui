@@ -60,9 +60,9 @@ jobs:
           at: ~/react-robust-ui
       - run: yarn build
       - persist_to_workspace:
-        root: ~/react-robust-ui
-        paths:
-          - lib/*
+          root: ~/react-robust-ui
+          paths:
+            - lib/*
 
   size-job:
     docker:
