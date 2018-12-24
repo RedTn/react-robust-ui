@@ -60,6 +60,11 @@ jobs:
           at: ~/react-robust-ui
       - run: yarn build
 
+    - persist_to_workspace:
+        root: ~/react-robust-ui
+        paths:
+          - lib/*
+
   size-job:
     docker:
       - image: circleci/node:10.14
