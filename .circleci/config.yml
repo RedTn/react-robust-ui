@@ -60,6 +60,18 @@ jobs:
           at: ~/react-robust-ui
       - run: yarn build
 
+  size-job:
+    docker:
+      - image: circleci/node:10.14
+
+    working_directory: ~/react-robust-ui
+
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/react-robust-ui
+      - run: yarn size
+
 workflows:
   version: 2
   build-deploy:
@@ -74,3 +86,6 @@ workflows:
       - lint-job:
           requires:
             - install-job
+      - size-job:
+          requires:
+            - build-job
