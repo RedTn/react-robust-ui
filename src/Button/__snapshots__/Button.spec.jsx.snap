@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button integration renders 1`] = `
+<Button
+  bordered={false}
+  className={null}
+  color={null}
+  gradient={false}
+  onClick={[Function]}
+  style={null}
+/>
+`;

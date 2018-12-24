@@ -11,7 +11,8 @@
     "lint": "eslint ./**/*.{jsx,js}",
     "lint-fix": "eslint --fix ./**/*.{jsx,js}",
     "size": "size-limit",
-    "test": "exit 0",
+    "test-only": "jest",
+    "test": "jest --coverage",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "surge": "surge"
@@ -39,11 +40,15 @@
     "babel-loader": "^8.0.4",
     "babel-plugin-ramda": "^2.0.0",
     "css-loader": "^1.0.1",
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.7.1",
     "eslint": "^5.1.0",
     "eslint-config-redtn-react": "^0.2.0",
     "eslint-plugin-react": "^7.11.1",
     "faker": "^4.1.0",
     "husky": "^1.2.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^23.6.0",
     "lint-staged": "^8.1.0",
     "node-sass": "^4.10.0",
     "prettier": "^1.15.3",
@@ -94,5 +99,8 @@
   "dependencies": {
     "classnames": "^2.2.6",
     "color": "^3.1.0"
+  },
+  "resolutions": {
+    "babel-core": "7.0.0-bridge.0"
   }
 }
