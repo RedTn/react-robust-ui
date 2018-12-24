@@ -76,6 +76,34 @@ jobs:
           at: ~/react-robust-ui
       - run: yarn size
 
+  build-storybook-job:
+    docker:
+      - image: circleci/node:10.14
+
+    working_directory: ~/react-robust-ui
+
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/react-robust-ui
+      - run: yarn build-storybook
+      - persist_to_workspace:
+          root: ~/react-robust-ui
+          paths:
+            - storybook-static/*
+
+  deployment-job:
+    docker:
+      - image: circleci/node:10.14
+
+    working_directory: ~/react-robust-ui
+
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/react-robust-ui
+      - run: surge --project ./storybook-static --domain redtn-storybook.surge.sh
+
 workflows:
   version: 2
   build-deploy:
@@ -93,3 +121,9 @@ workflows:
       - size-job:
           requires:
             - build-job
+      - build-storybook-job:
+          requires:
+            - install-job
+      - deployment-job:
+          requires:
+            - build-storybook-job
