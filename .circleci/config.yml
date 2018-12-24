@@ -58,7 +58,7 @@ jobs:
       - checkout
       - attach_workspace:
           at: ~/react-robust-ui
-      - run: yarn compile
+      - run: yarn build
 
 workflows:
   version: 2

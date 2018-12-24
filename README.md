@@ -1,5 +1,4 @@
-[![Build Status](https://travis-ci.org/AskToni/asktoni-client.svg?branch=master)](https://travis-ci.org/AskToni/asktoni-client)
-[![Greenkeeper badge](https://badges.greenkeeper.io/AskToni/asktoni-client.svg)](https://greenkeeper.io/)
+[![CircleCI](https://circleci.com/gh/RedTn/react-robust-ui.svg?style=svg)](https://circleci.com/gh/RedTn/react-robust-ui)
 
 # React Robust UI
 Experiments with robust stateful react UI Components

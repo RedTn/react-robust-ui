@@ -11,7 +11,7 @@
     "lint": "eslint ./**/*.{jsx,js}",
     "lint-fix": "eslint --fix ./**/*.{jsx,js}",
     "size": "size-limit",
-    "test": "test",
+    "test": "exit 0",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
