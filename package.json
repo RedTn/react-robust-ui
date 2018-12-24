@@ -13,7 +13,8 @@
     "size": "size-limit",
     "test": "exit 0",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "surge": "surge"
   },
   "author": {
     "name": "RedTn",
