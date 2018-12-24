@@ -9,9 +9,9 @@ const cx = classNames.bind(styles);
 
 const applyDynamicStyles = ({ color = '', gradient = false, bordered = false }) => {
     const style = {};
-  
+
     let baseColor = '';
-  
+
     switch (color) {
         case 'blue':
             baseColor = styles['blue'];
@@ -22,19 +22,19 @@ const applyDynamicStyles = ({ color = '', gradient = false, bordered = false }) 
         default:
             baseColor = styles.silver;
     }
-  
+
     if (gradient) {
         style.background = `linear-gradient(${baseColor}, ${Color(baseColor).darken(0.1)})`;
     } else {
         style.background = baseColor;
     }
-  
+
     style.color = Color(baseColor).isDark() ? styles.white : styles.black;
-  
+
     if (bordered) {
         style.border = `1px solid ${Color(baseColor).darken(0.1)}`;
     }
-  
+
     return style;
 };
 
@@ -58,9 +58,16 @@ class Button extends Component {
   };
 
   render() {
-      const { className, children, color, gradient, bordered } = this.props;
+      const { className, children, color, gradient, bordered, style } = this.props;
 
-      return <button className={cx(className, 'button')} style={applyDynamicStyles({ color, gradient, bordered })}>{children}</button>;
+      return (
+          <button
+              className={cx(className, 'button')}
+              style={{ ...style, ...applyDynamicStyles({ color, gradient, bordered }) }}
+          >
+              {children}
+          </button>
+      );
   }
 }
 
