@@ -96,17 +96,6 @@ describe('Button', () => {
                 })
             );
         });
-        it('applies default params to dynamic styling', () => {
-            expect.assertions(1);
-
-            const wrapper = shallow(<Button />);
-            expect(wrapper.instance().applyDynamicStyles({})).toEqual(
-                expect.objectContaining({
-                    background: expect.anything(),
-                    color: expect.anything()
-                })
-            );
-        });
     });
     describe('unit', () => {});
 });
