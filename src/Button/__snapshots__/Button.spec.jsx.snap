@@ -8,7 +8,7 @@ ShallowWrapper {
     className={null}
     color={null}
     gradient={false}
-    onClick={null}
+    onClick={[Function]}
     style={null}
   />,
   Symbol(enzyme.__renderer__): Object {
