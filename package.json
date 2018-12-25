@@ -15,7 +15,8 @@
     "test": "jest --coverage",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "surge": "surge"
+    "surge": "surge",
+    "codecov": "codecov"
   },
   "author": {
     "name": "RedTn",
@@ -39,6 +40,7 @@
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.4",
     "babel-plugin-ramda": "^2.0.0",
+    "codecov": "^3.1.0",
     "css-loader": "^1.0.1",
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.7.1",

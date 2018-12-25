@@ -118,7 +118,7 @@ jobs:
       - checkout
       - attach_workspace:
           at: ~/react-robust-ui
-      - run: codecov
+      - run: yarn codecov
 
 workflows:
   version: 2
