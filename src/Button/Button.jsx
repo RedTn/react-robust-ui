@@ -7,37 +7,6 @@ import { commonPropTypes, commonDefaultProps } from '__internal/Utils/CommonProp
 
 const cx = classNames.bind(styles);
 
-const applyDynamicStyles = ({ color = '', gradient = false, bordered = false }) => {
-    const style = {};
-
-    let baseColor = '';
-
-    switch (color) {
-        case 'blue':
-            baseColor = styles['blue'];
-            break;
-        case 'red':
-            baseColor = styles['red'];
-            break;
-        default:
-            baseColor = styles.silver;
-    }
-
-    if (gradient) {
-        style.background = `linear-gradient(${baseColor}, ${Color(baseColor).darken(0.1)})`;
-    } else {
-        style.background = baseColor;
-    }
-
-    style.color = Color(baseColor).isDark() ? styles.white : styles.black;
-
-    if (bordered) {
-        style.border = `1px solid ${Color(baseColor).darken(0.1)}`;
-    }
-
-    return style;
-};
-
 class Button extends Component {
   static propTypes = {
       ...commonPropTypes,
@@ -51,10 +20,41 @@ class Button extends Component {
   static defaultProps = {
       ...commonDefaultProps,
       children: null,
-      onClick: () => {},
+      onClick: null,
       color: null,
       gradient: false,
       bordered: false
+  };
+
+  applyDynamicStyles = ({ color = '', gradient = false, bordered = false }) => {
+      const style = {};
+
+      let baseColor = '';
+
+      switch (color) {
+          case 'blue':
+              baseColor = styles['blue'];
+              break;
+          case 'red':
+              baseColor = styles['red'];
+              break;
+          default:
+              baseColor = styles.silver;
+      }
+
+      if (gradient) {
+          style.background = `linear-gradient(${baseColor}, ${Color(baseColor).darken(0.1)})`;
+      } else {
+          style.background = baseColor;
+      }
+
+      style.color = Color(baseColor).isDark() ? styles.white : styles.black;
+
+      if (bordered) {
+          style.border = `1px solid ${Color(baseColor).darken(0.1)}`;
+      }
+
+      return style;
   };
 
   render() {
@@ -63,7 +63,7 @@ class Button extends Component {
       return (
           <button
               className={cx(className, 'button')}
-              style={{ ...style, ...applyDynamicStyles({ color, gradient, bordered }) }}
+              style={{ ...style, ...this.applyDynamicStyles({ color, gradient, bordered }) }}
           >
               {children}
           </button>
