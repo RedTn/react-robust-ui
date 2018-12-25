@@ -20,7 +20,7 @@ class Button extends Component {
   static defaultProps = {
       ...commonDefaultProps,
       children: null,
-      onClick: null,
+      onClick: () => {},
       color: null,
       gradient: false,
       bordered: false
