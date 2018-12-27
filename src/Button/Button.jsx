@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './styles.scss';
 import classNames from 'classnames/bind';
 import Color from 'color';
+import { Typography } from '../Typography';
 import { commonPropTypes, commonDefaultProps } from '__internal/Utils/CommonProps.js';
 
 const cx = classNames.bind(styles);
@@ -65,7 +66,7 @@ class Button extends Component {
               className={cx(className, 'button')}
               style={{ ...style, ...this.applyDynamicStyles({ color, gradient, bordered }) }}
           >
-              {children}
+              <Typography variant="button">{children}</Typography>
           </button>
       );
   }
