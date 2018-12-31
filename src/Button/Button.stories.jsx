@@ -8,7 +8,7 @@ import { withKnobs, text, boolean, select } from '@storybook/addon-knobs';
 storiesOf('Button', module)
     .addDecorator(withKnobs)
     .addDecorator(centered)
-    .add('Primary', () => (
+    .add('basic usage', () => (
         <Button
             color={select('Color', ['base', 'blue'], 'base')}
             gradient={boolean('Gradient', false)}

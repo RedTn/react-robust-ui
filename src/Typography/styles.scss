@@ -4,3 +4,19 @@
     font-size: 16px;
     font-weight: bold;
 }
+
+@mixin tab-base{
+    height: 19px;
+    color: blue;
+    font-size: 16px;
+    font-weight: 900;
+    font-family: Lato;
+  }
+  
+  .tab {
+    @include tab-base;
+  }
+  .tab-active {
+    @include tab-base;
+    color: grey;
+  }
