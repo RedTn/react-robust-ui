@@ -1,0 +1,26 @@
+$underline-size: 5px;
+
+.tab-group-article{
+  display: flex;
+  justify-content: space-between;
+}
+
+.pointer{
+  cursor: pointer;
+}
+
+.underline{
+  border-bottom: $underline-size solid teal;
+}
+
+.underline-hidden{
+  border-bottom: $underline-size solid transparent;
+}
+
+.tab-padding{
+  padding: 20px;
+}
+
+.no-margin{
+  margin: 0;
+}
