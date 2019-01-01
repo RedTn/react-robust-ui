@@ -3,7 +3,7 @@ import commonJS from 'rollup-plugin-commonjs';
 import babel from 'rollup-plugin-babel';
 import postcss from 'rollup-plugin-postcss';
 import includePaths from 'rollup-plugin-includepaths';
-//import minify from 'rollup-plugin-babel-minify';
+import minify from 'rollup-plugin-babel-minify';
 import pkg from './package.json';
 
 export default {
@@ -21,7 +21,7 @@ export default {
         }
     ],
     // Don't bundle unneccessary dependancies
-    external: ['react', 'react-dom', 'prop-types','babel'],
+    external: ['react', 'react-dom', 'prop-types', 'babel'],
     plugins: [
         includePaths({
             include: {},
@@ -36,14 +36,15 @@ export default {
         postcss({
             modules: true,
             extract: true,
-            minimize: true,
+            minimize: true
         }),
         babel({
             exclude: 'node_modules/**',
             runtimeHelpers: true
         }),
-    //minify(),
-    // TODO: Investigate rollup-uglify to minify javascript
+        minify({
+            comments: false
+        })
     ],
     treeshake: true
 };
