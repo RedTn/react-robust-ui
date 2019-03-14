@@ -43,7 +43,7 @@
     "codecov": "^3.1.0",
     "css-loader": "^2.1.0",
     "enzyme": "^3.9.0",
-    "enzyme-adapter-react-16": "^1.9.1",
+    "enzyme-adapter-react-16": "^1.11.2",
     "eslint": "^5.1.0",
     "eslint-config-redtn-react": "^0.2.0",
     "eslint-plugin-react": "^7.11.1",
