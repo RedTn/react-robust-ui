@@ -406,7 +406,6 @@ ShallowWrapper {
         },
       },
     },
-    Symbol(enzyme.__childContext__): null,
   },
   Symbol(enzyme.__unrendered__): null,
   Symbol(enzyme.__renderer__): Object {
@@ -762,7 +761,6 @@ ShallowWrapper {
         },
       },
     },
-    Symbol(enzyme.__childContext__): null,
   },
   Symbol(enzyme.__unrendered__): null,
   Symbol(enzyme.__renderer__): Object {
@@ -1119,7 +1117,6 @@ ShallowWrapper {
       },
     },
   },
-  Symbol(enzyme.__childContext__): null,
 }
 `;
 
@@ -1190,7 +1187,6 @@ ShallowWrapper {
       },
     },
   },
-  Symbol(enzyme.__childContext__): null,
 }
 `;
 
@@ -1396,6 +1392,5 @@ ShallowWrapper {
       },
     },
   },
-  Symbol(enzyme.__childContext__): null,
 }
 `;
