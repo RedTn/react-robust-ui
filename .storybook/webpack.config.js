@@ -1,8 +1,11 @@
 const path = require('path');
 
-module.exports = {
+module.exports = ({ config }) => ({
+  ...config,
   module: {
+    ...config.module,
     rules: [
+      ...config.module.rules,
       {
         test: /\.(jsx|js)?$/,
         exclude: /node_modules/,
@@ -28,25 +31,15 @@ module.exports = {
         ]
       },
       {
-        test: /\.css$/,
-        loaders: [
-          require.resolve('style-loader'),
-          {
-            loader: require.resolve('css-loader')
-          }
-        ]
-      },
-      {
         test: /\.stories\.jsx?$/,
-        loaders: [
-          require.resolve('@storybook/addon-storysource/loader')
-        ],
+        loaders: [require.resolve('@storybook/addon-storysource/loader')],
         enforce: 'pre'
       }
     ]
   },
   resolve: {
+    ...config.resolve,
     extensions: ['.js', '.jsx'],
     modules: [path.resolve(__dirname, '..', 'src'), path.resolve(__dirname, '..', 'node_modules')]
-  },
-};
+  }
+});

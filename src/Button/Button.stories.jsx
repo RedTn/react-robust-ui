@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import Button from './Button.jsx';
 import { action } from '@storybook/addon-actions';
-import centered from '@storybook/addon-centered';
+import centered from '@storybook/addon-centered/react';
 import { withKnobs, text, boolean, select } from '@storybook/addon-knobs';
 
 storiesOf('Button', module)
