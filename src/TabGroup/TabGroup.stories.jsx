@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import TabGroup from './TabGroup.jsx';
 import { action } from '@storybook/addon-actions';
-import centered from '@storybook/addon-centered';
+import centered from '@storybook/addon-centered/react';
 import { withKnobs } from '@storybook/addon-knobs';
 
 storiesOf('TabGroup', module)
