@@ -40,6 +40,18 @@ jobs:
           paths:
             - coverage/*
 
+  license-job
+    docker:
+      - image: circleci/node:10.14
+
+    working_directory: ~/react-robust-ui
+
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/react-robust-ui
+      - run: yarn license-checker
+
   lint-job:
     docker:
       - image: circleci/node:10.14
@@ -125,6 +137,9 @@ workflows:
   build-deploy:
     jobs:
       - install-job
+      - license-job:
+          requires:
+            - install-job
       - build-job:
           requires:
             - install-job
