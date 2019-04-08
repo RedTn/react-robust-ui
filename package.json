@@ -9,6 +9,8 @@
   "scripts": {
     "build": "rollup -c",
     "build:watch": "rollup -c -w",
+    "lc": "license-checker",
+    "license-checker": "license-checker --failOn \"GPL-1.0-or-later\"",
     "lint": "eslint ./**/*.{jsx,js}",
     "lint-fix": "eslint --fix ./**/*.{jsx,js}",
     "size": "size-limit",
@@ -52,6 +54,7 @@
     "husky": "^1.2.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^23.6.0",
+    "license-checker": "^25.0.1",
     "lint-staged": "^8.1.0",
     "node-sass": "^4.10.0",
     "prettier": "^1.15.3",
