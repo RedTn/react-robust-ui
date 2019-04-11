@@ -4,6 +4,7 @@ import babel from 'rollup-plugin-babel';
 import postcss from 'rollup-plugin-postcss';
 import includePaths from 'rollup-plugin-includepaths';
 import minify from 'rollup-plugin-babel-minify';
+import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import pkg from './package.json';
 
 export default {
@@ -20,9 +21,8 @@ export default {
             sourcemap: true
         }
     ],
-    // Don't bundle unneccessary dependancies
-    external: ['react', 'react-dom', 'prop-types', 'babel'],
     plugins: [
+        peerDepsExternal(),
         includePaths({
             include: {},
             paths: ['src'],

@@ -1,7 +1,7 @@
 {
   "name": "@redtn/react-robust-ui",
   "version": "0.0.0",
-  "description": "Experiemnts with robust stateful react UI components",
+  "description": "Experiments with robust stateful react UI components",
   "main": "lib/index.js",
   "module": "lib/index.es.js",
   "browser": "lib/index.js",
@@ -29,6 +29,9 @@
     "@babel/cli": "^7.1.5",
     "@babel/core": "^7.1.6",
     "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-proposal-do-expressions": "^7.2.0",
+    "@babel/plugin-proposal-export-default-from": "^7.2.0",
+    "@babel/plugin-proposal-optional-chaining": "^7.2.0",
     "@babel/polyfill": "^7.0.0",
     "@babel/preset-env": "^7.1.6",
     "@babel/preset-react": "^7.0.0",
@@ -68,6 +71,7 @@
     "rollup-plugin-commonjs": "^9.2.0",
     "rollup-plugin-includepaths": "^0.2.3",
     "rollup-plugin-node-resolve": "^4.0.0",
+    "rollup-plugin-peer-deps-external": "^2.2.0",
     "rollup-plugin-postcss": "^1.6.3",
     "sass-loader": "^7.1.0",
     "size-limit": "^1.0.0",
@@ -77,7 +81,7 @@
   "size-limit": [
     {
       "path": "lib/index.js",
-      "limit": "10 KB"
+      "limit": "13 KB"
     },
     {
       "path": "lib/index.css",

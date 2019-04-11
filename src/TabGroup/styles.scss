@@ -21,6 +21,31 @@ $underline-size: 5px;
   padding: 20px;
 }
 
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tab-group-ul{
+  margin: 0;
+}
+
+.tab-li{
+  list-style-type: none;
+}
+
+.divider-padding {
+  padding: 20px 10px 20px 10px;
+}
+
 .no-margin{
   margin: 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.inline-block {
+  display: inline-block;
 }
