@@ -1,0 +1,20 @@
+.setFixedWidth{
+  width: 600px;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+.icon-green-blur {
+  width: 20px;
+  height: 20px;
+  fill: #50B83C;
+}
+
+.vertical-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

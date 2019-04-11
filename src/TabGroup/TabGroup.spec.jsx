@@ -83,7 +83,7 @@ describe('TabGroup', () => {
                 const callback = jest.fn();
                 const wrapper = shallow(<TabGroup.Tab selectTab={callback} />);
                 expect(callback).not.toHaveBeenCalled();
-                wrapper.find('span').prop('onClick')();
+                wrapper.find('li').prop('onClick')();
                 expect(callback).toHaveBeenCalled();
             });
         });
