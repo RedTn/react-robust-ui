@@ -76,7 +76,7 @@
     "sass-loader": "^7.1.0",
     "size-limit": "^1.0.0",
     "style-loader": "^0.23.1",
-    "surge": "^0.20.1"
+    "surge": "^0.21.0"
   },
   "size-limit": [
     {
