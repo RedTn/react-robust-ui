@@ -34,7 +34,7 @@
     "@babel/plugin-proposal-optional-chaining": "^7.6.0",
     "@babel/polyfill": "^7.6.0",
     "@babel/preset-env": "^7.6.3",
-    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-react": "^7.6.3",
     "@emotion/core": "^10.0.17",
     "@emotion/styled": "^10.0.17",
     "@storybook/addon-actions": "^5.1.11",
