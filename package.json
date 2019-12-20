@@ -51,7 +51,7 @@
     "codecov": "^3.1.0",
     "css-loader": "^2.1.0",
     "emotion-theming": "^10.0.19",
-    "enzyme": "^3.10.0",
+    "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.14.0",
     "eslint": "^6.0.0",
     "eslint-config-redtn-react": "^0.2.0",
