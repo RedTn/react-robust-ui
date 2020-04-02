@@ -11979,10 +11979,10 @@ sisteransi@^0.1.1:
   resolved "https://registry.yarnpkg.com/sisteransi/-/sisteransi-0.1.1.tgz#5431447d5f7d1675aac667ccd0b865a4994cb3ce"
   integrity sha512-PmGOd02bM9YO5ifxpw36nrNMBTptEtfRl4qUYl9SndkolplkrZZOW7PGHjrZL53QvMVj9nQ+TKqUnRsw4tJa4g==
 
-size-limit@~4.4.2:
-  version "4.4.2"
-  resolved "https://registry.yarnpkg.com/size-limit/-/size-limit-4.4.2.tgz#3086c760a012f6d25a45427219ea7d366599bec7"
-  integrity sha512-nSKLvHyaX/jH3popKt6L602py1HoBM6ejPTagZz0D7ky3YKJMMnoBJ5DxhiyYH3JcLCjhd3ipRjtpoUngQGZ7w==
+size-limit@~4.4.4:
+  version "4.4.4"
+  resolved "https://registry.yarnpkg.com/size-limit/-/size-limit-4.4.4.tgz#def5534c1d1727768c1acf26800a1980a06d802a"
+  integrity sha512-mZVCgRC7O/dUP0d+z5nTdGNc4FaYOXvlyvuPVPE6NqRP1HLXkQyyJuQCMuXNovfszABRJxSEIGr5WfBLVkWAaA==
   dependencies:
     bytes "^3.1.0"
     chalk "^3.0.0"
