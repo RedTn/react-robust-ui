@@ -50,7 +50,7 @@
     "babel-loader": "~8.1.0",
     "babel-plugin-ramda": "~2.0.0",
     "codecov": "~3.6.5",
-    "css-loader": "~2.1.0",
+    "css-loader": "~3.5.2",
     "emotion-theming": "~10.0.19",
     "enzyme": "~3.10.0",
     "enzyme-adapter-react-16": "~1.14.0",
