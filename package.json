@@ -112,7 +112,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.6",
-    "color": "^3.1.0"
+    "color": "^3.1.4"
   },
   "resolutions": {
     "babel-core": "7.0.0-bridge.0"
